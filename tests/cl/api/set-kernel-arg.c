@@ -169,7 +169,7 @@ piglit_cl_test(const int argc,
 	     CL_SUCCESS, &result,
 	     "Set kernel argument for cl_int3");
 
-	test(kernel, 5, sizeof(struct_arg_t), &s_arg,
+	test(kernel, 5, sizeof(int) + sizeof(int4) + sizeof(float), &s_arg,
 	     CL_SUCCESS, &result,
 	     "Set kernel argument for struct");
 
